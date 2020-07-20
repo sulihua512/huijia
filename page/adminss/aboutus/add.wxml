@@ -1,0 +1,5 @@
+<!-- 关于我们页面 -->
+<textarea class='textarea_view' placeholder="请输入关于我们" maxlength='-1' value="{{content}}" auto-height='false' bindinput='ChangeContent'></textarea>
+<view class="buttons">
+    <button  class="confirm" bindtap='add'>修改</button>
+</view>

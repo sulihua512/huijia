@@ -1,0 +1,30 @@
+<!-- 资讯详情页面 -->
+<view class="container">
+    <view class="address-container">
+        <view class="address">
+            <view class="title">{{articleInfo.name}}</view>
+            <view class='share_view'>
+                <button open-type="share">
+                    <image src='/images/share.png'></image>
+                </button>
+            </view>
+        </view>
+    </view>
+	<view class="address-container address-container3">
+        <view class="address">
+            <view class="title">发布时间:{{articleInfo.createdAt}}（{{articleInfo.read_num != undefined ? articleInfo.read_num : 0}}阅读）</view>
+			<view class='share_view'>
+			</view>
+        </view>
+    </view>
+    <image src='{{articleInfo.image}}' mode='widthFix' class='image_view'></image>
+	
+    <block wx:for='{{articleInfo.images_list}}' wx:key='*this'>
+        <image src='{{item}}' mode='widthFix' class='image_view2'></image>
+    </block>
+    <view class='goods_detail'>
+        内容：
+        <view>{{articleInfo.content}}</view>
+    </view>
+    <!-- <text ></text> -->
+</view>

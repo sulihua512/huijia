@@ -1,0 +1,65 @@
+<!-- 个人中心 -->
+<view class='user_view'>
+    <view class='user_info'>
+        <navigator url="/page/mine/setting/index">
+            <image src="{{userInfo.userPic}}" mode="aspectFill" class='avatar_img'></image>
+        </navigator>
+        <view>
+            {{userInfo.nickName}}
+        </view>
+    </view>
+    <image src='/images/usercenter/userbg.png' class='userbg'></image>
+</view>
+
+<navigator url="/page/mine/col/index">
+    <view class='menulist'>
+        <view class='menu_item_img'>
+            <image src="/images/usercenter/diandan.png" mode="widthFix"></image>
+        </view>
+        <view>我的收藏</view>
+        <view class='right_view'>
+            <image src="/images/none.png" mode="aspectFit"></image>
+            <!--占位空图片-->
+        </view>
+        <image src="/images/more.png" mode="widthFix"></image>
+    </view>
+</navigator>
+<button open-type="contact" class='button_contact menulist '>
+    <view class='menu_item_img'>
+        <image src="/images/usercenter/diandan.png" mode="widthFix"></image>
+    </view>
+    <view>联系客服</view>
+    <view class='right_view'>
+        <image src="/images/none.png" mode="aspectFit"></image>
+        <!--占位空图片-->
+    </view>
+    <image src="/images/more.png" mode="widthFix"></image>
+</button>
+<navigator url="/page/mine/abountus/index">
+    <view class='menulist'>
+        <view class='menu_item_img'>
+            <image src="/images/usercenter/diandan.png" mode="widthFix"></image>
+        </view>
+        <view>关于租房平台</view>
+        <view class='right_view'>
+            <image src="/images/none.png" mode="aspectFit"></image>
+            <!--占位空图片-->
+        </view>
+        <image src="/images/more.png" mode="widthFix"></image>
+    </view>
+</navigator>
+<block wx:if="{{userInfo.is_admin == 1}}">
+    <navigator url="/page/adminss/center/index">
+        <view class='menulist'>
+            <view class='menu_item_img'>
+                <image src="/images/usercenter/huodong.png" mode="widthFix"></image>
+            </view>
+            <view>后台管理</view>
+            <view class='right_view'>
+                <image src="/images/none.png" mode="aspectFit"></image>
+                <!--占位空图片-->
+            </view>
+            <image src="/images/more.png" mode="widthFix"></image>
+        </view>
+    </navigator>
+</block>

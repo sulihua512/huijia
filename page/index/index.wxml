@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+    <!--start 搜索  -->
+	<!--start 搜索  -->
+   <view class='videCenter'>
+        <view class='scearh' bindtap='onScearhTap'>
+            <view>
+                <image src='/images/search.png'></image>
+                <text>想住在哪儿？</text>
+            </view>
+        </view>
+    </view>
+    <view class='banner'>
+        <view class='slider_view'>
+            <!-- start 轮播图 -->
+            <swiper  autoplay="true" circular="true" interval="3000" duration="500" indicator-active-color="#fff" indicator-color="rgba(0,0,0,0.3)">
+				<swiper-item wx:for='{{bannerList}}' wx:key='*this'>
+					<image src="{{item.image}}" class="slide-image" mode='aspectFill' />
+				</swiper-item>
+            </swiper>
+
+            <!-- end 轮播图 -->
+        </view>
+    </view>
+    <!-- start 首页分类  可滑动 -->
+    <view class='classMenu padding'>
+        <view class='menulist'>
+            推荐房屋
+        </view>
+    </view>
+    <!-- end 首页分类 可滑动-->
+    <view class='fruitsCenter padding'>
+        <view class='frutisdetils_small frutisdetils' bindtap='makeNavigate' wx:for='{{goods_list}}' wx:key='*this' data-url="/page/info/index?objectId={{item.objectId}}">
+            
+            <image src='{{item.image}}' class='frutisshopImg' mode='aspectFit'></image>
+            <view class='frutismose'>
+                <view>
+                    <text class='work_break'>{{item.name}}</text>
+                    <text>￥{{item.price}}/月</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

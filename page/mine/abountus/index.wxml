@@ -1,0 +1,2 @@
+<!--page/mine/abountus/index.wxml-->
+<text>{{content}}</text>

@@ -1,0 +1,19 @@
+<!-- 分类 -->
+<view class="container">
+	<!-- 房屋分类列表 -->
+	<view class="content-container">
+		<scroll-view class="classify-container" scroll-y="true">
+			<view class="classify {{classifySeleted==classify.objectId?'active':''}}" wx:for="{{classifyList}}" wx:for-item="classify" wx:key="id" data-id="{{classify.objectId}}" bindtap="tapClassify">
+				<view class="name">{{classify.name}}</view>
+			</view>
+		</scroll-view>
+		<!-- 房屋分类对应房源列表 -->
+		<scroll-view class="goods-container" scroll-y="true" scroll-into-view="{{classifyViewed}}" >
+			<view class="goods" wx:for="{{classgoods}}" wx:key=""  bindtap='makeNavigate' data-url="/page/info/index?objectId={{item.objectId}}">
+				<image class="pic" src="{{item.image}}"></image>
+				<view class="name ellipsis">{{item.name}}</view>
+				<view class="price">￥{{item.price}}</view>
+			</view>
+		</scroll-view>
+	</view>
+</view>

@@ -1,0 +1,77 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.93",
+	"appid": "wx2c40f445dc9a8558",
+	"projectname": "%E6%88%BF%E5%B1%8B%E7%A7%9F%E8%B5%81",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "page/mine/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "后台管理",
+					"pathName": "page/adminss/center/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "page/info/index",
+					"query": "objectId=9ddeec9c85",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "page/adminss/goods/index/index",
+					"pathName": "page/adminss/goods/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "page/mine/col/index",
+					"pathName": "page/mine/col/index",
+					"scene": null
+				}
+			]
+		}
+	}
+}

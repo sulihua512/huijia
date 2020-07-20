@@ -1,0 +1,35 @@
+<!-- 房源详情页面 -->
+<view class="container">
+    <swiper autoplay="false" circular="true" interval="3000" duration="500" class='swiper_view' indicator-dots='true'>
+        <swiper-item wx:for='{{articleInfo.images_list}}' wx:key='*this'>
+            <image src="{{item}}" class="image_view2" mode='widthFix' />
+        </swiper-item>
+    </swiper>
+    <view class="address-container">
+        <view class="address">
+            <view class="title">{{articleInfo.name}}(价格:{{articleInfo.price}}/月)</view>
+            <view class='share_view'>
+                <button bindtap='makeCollect' data-id="{{articleInfo.objectId}}">
+                    <image src="{{cot_status == 0 ? '/images/red.png' : '/images/redok.png'}}"></image> {{info.cot_num}}
+                </button>
+                <!-- 分享 -->
+                <button open-type="share">
+                    <image src='/images/share.png'></image>
+                </button>
+            </view>
+        </view>
+        <image src="/images/mail.png" class="mail" mode="widthFix" />
+    </view>
+    <text class='goods_detail'>具体位置：{{articleInfo.address}} {{articleInfo.address_detail}} </text>
+    <!-- 清单 -->
+    <view  class='goods_detail'>
+    <view>房源详情：</view>
+     <text> {{articleInfo.content}}</text>
+    </view>
+   
+</view>
+<!-- <navigator url='../detail/index?objectId={{articleInfo.objectId}}'> -->
+<view class='goDetail' bindtap='openMap'>地图导航</view>
+<!-- </navigator> -->
+<view>
+</view>

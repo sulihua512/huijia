@@ -1,0 +1,23 @@
+<!-- 租房百科 -->
+<!--index.wxml-->
+<view class="container">
+    <view class='listLogo'>
+        <scroll-view class='listmose' scroll-x>
+            <view wx:for='{{classList}}' wx:key='' data-id='{{item.objectId}}' bindtap='changeCategory' class="{{nowClassify == item.objectId ? 'active' : ''}}">
+                {{item.name}}
+            </view>
+        </scroll-view>
+    </view>
+	<view class='fruitsCenter padding'>
+        <view class='frutisdetils_small frutisdetils' bindtap='makeNavigate' wx:for='{{goods_list}}' wx:key='' data-url="/page/article_info/index?objectId={{item.objectId}}">
+            
+            <image src='{{item.image}}' class='frutisshopImg' mode='aspectFit'></image>
+            <view class='frutismose'>
+                <view>
+                    <text class='work_break'>{{item.name}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+   
+</view>
